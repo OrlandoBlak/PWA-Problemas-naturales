@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title><%= pageTitle %></title>
+    
+    <link rel="stylesheet" href="/style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+    <link rel="apple-touch-icon" href="/icons/icon-192.png">
+</head>
+<body>
+
+    <header>
+        <h1><%= headerTitle %></h1>
+        <p>Operaciones Combinadas (Modo Server)</p>
+        
+        <small style="color: #bdc3c7;">Acceso: <%= serverDate %></small>
+    </header>
+
+    <main>
+        <section class="card theory">
+            <h2>Jerarquía de Operaciones</h2>
+            <ol>
+                <li><strong>( )</strong> Paréntesis</li>
+                <li><strong>× y :</strong> Multiplicación y División</li>
+                <li><strong>+ y -</strong> Suma y Resta</li>
+            </ol>
+        </section>
+
+        <section class="card practice">
+            <h2>¡A practicar!</h2>
+            
+            <% if (message) { %>
+                <div style="background-color: #d4edda; color: #155724; padding: 10px; border-radius: 5px; margin-bottom: 10px;">
+                    <%= message %>
+                </div>
+            <% } %>
+
+            <div id="exercise-container">
+                <p class="math-problem">Presiona el botón</p>
+                <button id="btn-generate">Nuevo Ejercicio</button>
+            </div>
+            <div id="result-area" class="hidden"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>PWA Educativa - Renderizada con EJS</p>
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+</body>
+</html>

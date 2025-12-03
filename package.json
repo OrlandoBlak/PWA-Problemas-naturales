@@ -1,0 +1,23 @@
+{
+  "name": "pwa-naturales",
+  "version": "1.0.0",
+  "description": "PWA educativa de operaciones combinadas con números naturales",
+  "main": "service.js",
+  "scripts": {
+    "start": "node service.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pwa",
+    "matematicas",
+    "educacion",
+    "node",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.22.1"
+  }
+}

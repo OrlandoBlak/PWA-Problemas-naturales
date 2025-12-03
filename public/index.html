@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones Combinadas 6º</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#2c3e50">
+    
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+
+    <header>
+        <h1>🔢 Mates 6º</h1>
+        <p>Operaciones Combinadas</p>
+        <button id="btn-notify" style="background-color: #f39c12; border: none; padding: 5px 10px; border-radius: 4px; color: white; cursor: pointer; font-size: 0.8rem; margin-top: 5px;">
+            Activar Notificaciones
+        </button>
+    </header>
+
+    <main>
+    <section class="card theory">
+        <h2> Las Reglas del Juego</h2>
+        <p style="margin-bottom: 15px;">Para ganar, no puedes calcular a lo loco. ¡Sigue este orden estricto!</p>
+        
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 12px; background: #fff3cd; padding: 10px; border-radius: 8px; border-left: 5px solid #f1c40f;">
+                <strong>1º. Los Paréntesis ( )</strong><br>
+                <span style="font-size: 0.9rem;">Son los jefes. Resuelve lo que está atrapado dentro de ellos primero.</span>
+            </li>
+            
+            <li style="margin-bottom: 12px; background: #d4edda; padding: 10px; border-radius: 8px; border-left: 5px solid #2ecc71;">
+                <strong>2º. Multiplicar y Dividir (× ÷)</strong><br>
+                <span style="font-size: 0.9rem;">Son los corredores rápidos. Resuélvelos de izquierda a derecha.</span>
+            </li>
+            
+            <li style="margin-bottom: 12px; background: #f8d7da; padding: 10px; border-radius: 8px; border-left: 5px solid #e74c3c;">
+                <strong>3º. Sumar y Restar (+ -)</strong><br>
+                <span style="font-size: 0.9rem;">Van al final. Solo cuando ya no queden otras operaciones.</span>
+            </li>
+        </ul>
+
+        <div style="margin-top: 15px; font-size: 0.9rem; color: #555; border-top: 1px solid #ddd; padding-top: 10px;">
+            <strong>Ejemplo:</strong> 2 + <strong>3 × 4</strong> <br>
+            No sumes primero (5 × 4 = 20) <br>
+            Multiplica primero: 2 + <strong>12</strong> = <strong>14</strong>
+        </div>
+    </section>
+
+        <section class="card practice">
+            <h2>¡A practicar!</h2>
+            
+            <div id="score-board" style="text-align: right; color: #7f8c8d; font-size: 0.9rem;">
+                Resueltos: <span id="solved-count">0</span>
+            </div>
+
+            <div id="exercise-container">
+                <p class="math-problem">Presiona "Nuevo"</p>
+                
+                <div id="answer-area" class="hidden" style="margin-bottom: 15px;">
+                    <input type="number" id="user-input" placeholder="Tu respuesta" style="padding: 10px; font-size: 1.2rem; width: 100px; text-align: center;">
+                    <button id="btn-check" style="background-color: #2980b9; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Verificar</button>
+                </div>
+                <button id="btn-generate">Nuevo Ejercicio</button>
+            </div>
+            
+            <div id="result-area" class="hidden" style="margin-top: 15px; font-weight: bold; font-size: 1.2rem;"></div>
+        </section>
+        <section class="card camera-section">
+            <h2>📸 Cámara</h2>
+            <p style="font-size: 0.9rem; margin-bottom: 10px;">Usa la cámara para escanear (Simulación)</p>
+            
+            <div style="text-align: center;">
+                <video id="video-feed" autoplay playsinline class="hidden"></video>
+                
+                <button id="btn-camera" style="background-color: #8e44ad; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 1rem;">
+                    Abrir Cámara
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>PWA Educativa - Números Naturales</p>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

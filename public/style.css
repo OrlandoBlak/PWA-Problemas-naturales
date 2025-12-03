@@ -1,0 +1,143 @@
+/* --- Variables de Color --- */
+:root {
+    --primary-color: #2c3e50;    /* Azul oscuro (Mismo del manifest) */
+    --accent-color: #27ae60;     /* Verde para botones */
+    --bg-color: #f4f6f7;         /* Gris muy clarito de fondo */
+    --text-color: #333;
+    --card-bg: #ffffff;
+}
+
+/* --- Estilos Generales --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Para que el footer se quede abajo */
+}
+
+/* --- Cabecera --- */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+header p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* --- Contenido Principal --- */
+main {
+    flex: 1; /* Empuja el footer hacia abajo */
+    padding: 1.5rem;
+    max-width: 600px; /* Que no se estire demasiado en PC */
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- Tarjetas (Cards) --- */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.card h2 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* --- Sección de Teoría --- */
+.theory ol {
+    padding-left: 1.5rem;
+}
+
+.theory li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Sección de Práctica --- */
+.math-problem {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #34495e;
+    letter-spacing: 2px;
+}
+
+#btn-generate {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    /* Importante para móvil: */
+    touch-action: manipulation; 
+}
+
+#btn-generate:hover {
+    background-color: #219150;
+}
+
+#btn-generate:active {
+    transform: scale(0.98);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #e0e0e0;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* --- Utilidades --- */
+.hidden {
+    display: none;
+}
+/* --- Estilos de la Cámara --- */
+#video-feed {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #000;
+    /* Efecto espejo (opcional, para que se sienta natural) */
+    transform: scaleX(-1); 
+}
+
+/* Ajuste para el botón cuando la cámara está activa */
+.camera-active {
+    background-color: #c0392b !important; /* Rojo para cerrar */
+}
